@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Print Prime Number</title>
+</head>
+<body>
+	<script type="text/javascript">
+		n1 = parseInt(prompt("Enter No"));
+		n2 = parseInt(prompt("Enter No"));
+		if(n2>n1)
+		{
+			a=n1;
+			b=n2;
+		}
+		else
+		{
+			a=n2;
+			b=n1;
+		}
+		for(i=a+1;i<b;i++)
+		{
+			flag=true;
+			for(j=2;j<i;j++)
+			{
+				if(i%j==0)
+				{
+					flag=false;
+					break;
+				}
+			}
+			if(flag)
+			{
+				document.write(i+"</br>");
+			}
+		}
+	</script>
+
+</body>
+</html>
