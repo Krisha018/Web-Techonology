@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<table>
+		<script type="text/javascript">
+			faculty = 
+			[
+				{Name:"Wasim Ghada", Experiance:12, Age:35, Email:"wasim123@darshan.ac.in"},
+				{Name:"Mehul Bhundiya", Experiance:9, Age:30, Email:"mehul456@darshan.ac.in"},
+				{Name:"Pradyumansigh Jadeja", Experiance:17, Age:50, Email:"pradyuman111@darshan.ac.in"},
+				{Name:"Naimish Vadodariya", Experiance:8, Age:25, Email:"naimish222@darshan.ac.in"},
+			];
+
+			/*for(i=0;i<students.length;i++){
+				console.log(students[i].name);
+			}*/
+
+			formatedfaculty = faculty.map((fac)=>{
+				return "<tr>"
+							+"<td>"+fac.Name+"</td>"
+							+"<td>"+fac.Experiance+"</td>"
+							+"<td>"+fac.Age+"</td>"
+							+"<td>"+fac.Email+"</td>"+
+					   "</tr>"
+					  
+			})
+
+			document.write("<ul>");
+			document.write(formatedfaculty);
+			document.write("</ul>");
+		
+		</script>
+	</table>
+</body>
+</html>
