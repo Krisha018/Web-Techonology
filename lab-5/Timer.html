@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Timer</title>
+</head>
+<body>
+	<input type="text" id="setTimer">
+	<h1 id="Timer">Ans</h1>
+	<input type="Button" value="start" id="startTimer" onclick="startTimer()">
 
+	<script type="text/javascript">
+		console.log()
+		var a=document.getElementById("setTimer");
+		var b=document.getElementById("Timer");
+		var c;
+
+		function startTimer()
+		{
+			c=setInterval(Timer,10);
+		}
+		function Timer()
+		{
+			b.innerHTML=a.value;
+			if(a.value>0)
+			{
+				a.value--;
+				b.innerHTML=a.value/100;
+			}
+			else
+			{
+				clearInterval(c);
+				setTimeout(Timeup);
+			}
+		}
+		function Timeup()
+		{
+			document.write("Timeup");
+		}
+
+	</script>
+
+</body>
+</html>
