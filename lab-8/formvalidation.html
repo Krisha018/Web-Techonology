@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<table >
+		<form>
+			<tr>
+				<td>UserName:</td>
+				<td><input type="text" id="uname"><span id="unameencorrect"></span></td>
+				
+				
+				
+			</tr></br>
+			<tr>
+				<td>PhoneNumber:</td>
+				<td><input type="text" id="pnumber"><span id="pnumberencorrect"></span></td>
+				
+			</tr>
+			<tr>
+				<td>Gmail:</td>
+				<td><input type="text" id="gmail"><span id="Gmailencorrect"></span></td>
+			</tr>
+			<tr>
+				<td>EnrollementNumber:</td>
+				<td><input type="text" id="enumber"><span id="enumberencorrect"></span></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="Password" id="Password"><span id="passwordencorrect"></span></td>
+			</tr>
+			<tr>
+				<td>ConfirmPassword:</td>
+				<td><input type="Password" id="cp"><span id="cpencorrect"></span></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="validate" onclick="valid()"></td>
+			</tr>
+		</form>
+	</table>
+	<script type="text/javascript">
+		function valid(){
+		UserName=document.getElementById("uname").value
+		PhoneNumber=document.getElementById("pnumber").value
+		gmail=document.getElementById("gmail").value
+		EnrollementNumber=document.getElementById("enumber").value
+		Password=document.getElementById("Password").value
+		ConfirmPassword=document.getElementById("cp").value
+		ucheck=/^[A-Za-z]{1}[A-za-z0-9]+[_.]?[A-Za-z0-9]+$/
+		pnumbercheck=/^[1-9]{1}[0-9]{9}$/
+		gmailcheck=/^[a-z]{1}[a-z0-9]+@(gmail)\.(com)$/
+		enumbercheck=/^(2101010){1}[0-9]{4}$/
+		passwordcheck=/^[A-Za-z]{1}[A-Za-z0-9]+[#@*&?/_.]?[A-Za-z0-9]+$/
+		regx1=new RegExp(ucheck);
+		regx2=new RegExp(pnumbercheck);
+		regx3=new RegExp(gmailcheck);
+		regx4=new RegExp(enumbercheck);
+		regx5=new RegExp(passwordcheck);
+		if(regx1.test(UserName)){
+			 document.getElementById("unameencorrect").innerHTML="valied";
+		 	document.getElementById("unameencorrect").style.color="blue"
+		}
+		else{
+			document.getElementById("unameencorrect").innerHTML="not valied";
+		 	document.getElementById("unameencorrect").style.color="red"
+		}
+		
+		if(regx2.test(PhoneNumber)){
+			 document.getElementById("pnumberencorrect").innerHTML="valied";
+		 	document.getElementById("pnumberencorrect").style.color="blue"
+		}
+		else{
+			document.getElementById("pnumberencorrect").innerHTML="not valied";
+		 	document.getElementById("pnumberencorrect").style.color="red"
+		}
+		if(regx3.test(gmail)){
+			 document.getElementById("Gmailencorrect").innerHTML="valied";
+		 	document.getElementById("Gmailencorrect").style.color="blue"
+		}
+		else{
+			document.getElementById("Gmailencorrect").innerHTML="not valied";
+		 	document.getElementById("Gmailencorrect").style.color="red"
+		}
+		if(regx4.test(EnrollementNumber)){
+			 document.getElementById("enumberencorrect").innerHTML="valied";
+		 	document.getElementById("enumberencorrect").style.color="blue"
+		}
+		else{
+			document.getElementById("enumberencorrect").innerHTML="not valied";
+		 	document.getElementById("enumberencorrect").style.color="red"
+		}
 
+		if(regx5.test(Password)){
+			 document.getElementById("passwordencorrect").innerHTML="valied";
+		 	document.getElementById("passwordencorrect").style.color="blue"
+		}
+		else{
+			document.getElementById("passwordencorrect").innerHTML="not valied";
+		 	document.getElementById("passwordencorrect").style.color="red"
+		}
+		if(document.getElementById("Password").value==document.getElementById("cp").value){
+
+			document.getElementById("cpencorrect").innerHTML="valied";
+		 	document.getElementById("cpencorrect").style.color="blue"	
+		}
+		else{
+
+			document.getElementById("cpencorrect").innerHTML="not valied";
+		 	document.getElementById("cpencorrect").style.color="red"
+		}				
+	}	
+	</script>
+	
+</body>
+</html>
